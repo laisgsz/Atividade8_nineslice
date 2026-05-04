@@ -1,8 +1,13 @@
 extends Control
 
-@onready var texture_rect: TextureRect = $NinePatchRect/MarginContainer/VBoxContainer/TextureRect
-@onready var progress_bar: ProgressBar = $CenterContainer/NinePatchRect/MarginContainer/VBoxContainer/MeuProgressBar
+# O coração agora está dentro do HBoxContainer
+@onready var texture_rect: TextureRect = $CenterContainer/NinePatchRect/MarginContainer/VBoxContainer/HBoxContainer/TextureRect
+
+# O botão agora vem antes da barra na sua árvore
 @onready var botao: Button = $CenterContainer/NinePatchRect/MarginContainer/VBoxContainer/BotaoAnimar
+
+# A barra de progresso é o último item do VBoxContainer
+@onready var progress_bar: ProgressBar = $CenterContainer/NinePatchRect/MarginContainer/VBoxContainer/MeuProgressBar
 # Variável para controlar a animação e evitar conflitos se clicar várias vezes
 var meu_tween: Tween
 
